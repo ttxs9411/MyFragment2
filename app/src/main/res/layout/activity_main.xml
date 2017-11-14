@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.fengjian.myfragment.MainActivity">
+
+    <fragment
+        android:id="@+id/id_fragment_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:name="com.example.fengjian.myfragment.TitleFragment" />
+
+    <!--<fragment-->
+        <!--android:id="@+id/id_fragment_content"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="fill_parent"-->
+        <!--android:name="com.example.fengjian.myfragment.ContentFragment"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/id_fragment_title"-->
+        <!--app:layout_constraintBottom_toTopOf="@+id/id_ly_bottombar"/>-->
+
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_viewpager"
+        app:layout_constraintTop_toBottomOf="@+id/id_fragment_title"
+        app:layout_constraintBottom_toTopOf="@+id/id_ly_bottombar">
+    </android.support.v4.view.ViewPager>
+
+    <include
+        android:id="@+id/id_ly_bottombar"
+        android:layout_height="55dp"
+        android:layout_width="match_parent"
+        layout="@layout/bottombar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="8dp" />
+
+
+</android.support.constraint.ConstraintLayout>
